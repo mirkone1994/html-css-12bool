@@ -20,3 +20,17 @@
     line-height: 250px;
     vertical-align: middle;
 }
+
+@media screen and (min-width: 576px){
+    .row .col-sm-1 {
+        height: 250px;
+        background-color: red;
+        border: 1px solid black;
+        color: black;
+        text-align: center;
+        line-height: 250px;
+        vertical-align: middle;
+    }
+
+}
+
