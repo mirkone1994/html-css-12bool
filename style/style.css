@@ -2,7 +2,7 @@
     border: 2px solid black;
     height: 250px;
 }
-[class^='col'] {
+[class^='col-xs'] {
     height: 250px;
     background-color: pink;
     border: 1px solid black;
@@ -11,7 +11,7 @@
     line-height: 250px;
     vertical-align: middle;
 }
-.nested [class^='col'] {
+.nested [class^='col-xs'] {
     height: 250px;
     background-color: #F07F80;
     border: 1px solid black;
@@ -19,6 +19,19 @@
     text-align: center;
     line-height: 250px;
     vertical-align: middle;
+}
+.row .col-xs-2.order1 {
+    order: -1;
+}
+.col-xs-1.hidden {
+    display: none;
+}
+.row.nested.left {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.row.nested.left .col-xs-2.hidden {
+    display: none;
 }
 
 @media screen and (min-width: 576px){
@@ -30,6 +43,19 @@
         text-align: center;
         line-height: 250px;
         vertical-align: middle;
+    }
+    .row .col-xs-2.order1 {
+        display: none;
+    }
+    .col-xs-1.hidden {
+        display: block;
+    }
+    .row.nested.left {
+        display: flex;
+        flex-direction: row;
+    }
+    .row.nested.left .col-xs-2.hidden {
+        display: block;
     }
 
 }
